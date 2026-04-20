@@ -33,6 +33,6 @@ public class SensoresIoT extends Thread {
             System.out.println("Sensor " + idSensor + " produjo " + idEvento + " tipo " + tipo);
         }
 
-        System.out.println("Sensor " + idSensor + " terminó.");
+        System.out.println("Sensor " + idSensor + " termino.");
     }
 }

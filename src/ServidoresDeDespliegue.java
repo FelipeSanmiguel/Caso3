@@ -18,7 +18,7 @@ public class ServidoresDeDespliegue extends Thread {
             Evento evento = buzonConsolidacion.retirar();
 
             if (evento.getFin()) {
-                System.out.println("Servidor " + idServidor + " recibió FIN y terminó.");
+                System.out.println("Servidor " + idServidor + " recibio FIN y termino.");
                 break;
             }
 
@@ -46,6 +46,6 @@ public class ServidoresDeDespliegue extends Thread {
         }
 
         System.out.println("Servidor " + idServidor
-                + " terminó de procesar evento " + evento.getId() + ".");
+                + " termino de procesar evento " + evento.getId() + ".");
     }
 }
