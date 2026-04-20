@@ -21,7 +21,7 @@ public class Administrador extends Thread {
         boolean terminar = false;
 
         while (!terminar) {
-            Evento evento = buzonAlertas.retirar();
+            Evento evento = buzonAlertas.retirarSemiActivo();
 
             if (evento.getFin()) {
                 for (int i = 0; i < cantidadClasificadores; i++) {

@@ -204,6 +204,12 @@ public class App {
 
         System.out.println("Sistema IoT finalizado correctamente.");
 
+
+
+        System.out.println("Total de eventos esperados: " + totalEventosEsperados);
+        System.out.println("Total de eventos creados: " + sensores[2].getCantidadEventos());
+        System.out.println("Cola: " + buzonesServidores[0].getCola().size());
+
     }
 }
 

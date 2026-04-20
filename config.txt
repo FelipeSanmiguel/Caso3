@@ -1,6 +1,6 @@
 ni=3
 baseEventos=2
 nc=2
-ns=2
-tam1=5
+ns=3
+tam1=4
 tam2=5

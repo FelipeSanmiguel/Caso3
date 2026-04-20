@@ -35,4 +35,26 @@ public class SensoresIoT extends Thread {
 
         System.out.println("Sensor " + idSensor + " termino.");
     }
+
+    public int getIdSensor() {
+        return idSensor;
+    }
+
+    public int getCantidadEventos() {
+        return cantidadEventos;
+    }
+
+    public int getNs() {
+        return ns;
+    }
+
+    public Buzon getBuzonEntrada() {
+        return buzonEntrada;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    
 }

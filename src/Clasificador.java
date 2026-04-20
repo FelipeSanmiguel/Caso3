@@ -49,7 +49,7 @@ public class Clasificador extends Thread {
             */
             int indiceServidor = evento.getTipo() - 1; 
 
-            depositarSemiActivo(buzonesServidores[indiceServidor], evento);
+            depositarPasivo(buzonesServidores[indiceServidor], evento);
 
             System.out.println("Clasificador " + idClasificador
                     + " envio evento " + evento.getId()
@@ -68,13 +68,11 @@ public class Clasificador extends Thread {
 
     public void enviarFinAServidores() {
         for (int i = 0; i < buzonesServidores.length; i++) {
-            depositarSemiActivo(buzonesServidores[i], Evento.crearFin());
+            depositarPasivo(buzonesServidores[i], Evento.crearFin());
         }
     }
 
-    public void depositarSemiActivo(Buzon buzon, Evento evento) {
-        while (!buzon.intentarDepositar(evento)) {
-            Thread.yield();
-        }
+    public void depositarPasivo(Buzon buzon, Evento evento) {
+        buzon.depositarPasivo(evento);
     }
 }
